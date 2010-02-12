@@ -104,7 +104,9 @@ LINE_OVERWRITE_SMALL = " " * 10
 LINE_OVERWRITE_MID = " " * 30
 LINE_OVERWRITE_FULL = " " * 60
 
-       
+Bool_Verbose = True
+log = AptOfflineLib.Log( Bool_Verbose, lock=True )
+
 class FetchBugReports( AptOfflineLib.Archiver ):
         def __init__( self, apt_bug_file_format, IgnoredBugTypes, ArchiveFile=None, lock=False ):
                 self.bugsList = []
@@ -1598,11 +1600,10 @@ def main():
                 # Sanitize the options/arguments
                 #
         	# Global opts
-        	Bool_Verbose = args.verbose
+        	
         	Bool_TestWindows = args.test_windows
                 
-        	global log
-        	log = AptOfflineLib.Log( Bool_Verbose, lock=True )
+
         	log.verbose(str(args) + "\n")
         
         	args.func(args)
