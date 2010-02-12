@@ -2,6 +2,8 @@ import sys,os
 from PyQt4 import QtCore, QtGui
 
 from apt_offline_gui.Ui_AptOfflineQtCreateProfile import Ui_CreateProfile
+from apt_offline_gui.UiDataStructs import SetterArgs
+import apt_offline_core.AptOfflineCoreLib
 
 
 class AptOfflineQtCreateProfile(QtGui.QDialog):
@@ -32,8 +34,25 @@ class AptOfflineQtCreateProfile(QtGui.QDialog):
         self.ui.packageList.setEnabled(self.isFieldChecked)
     
     def CreateProfile(self):
-        # Create the profile here and then exit
-        self.accept()
+        # Is the Update requested
+        self.updateChecked = self.ui.updateCheckBox.isChecked()
+        # Is Upgrade requested
+        self.upgradeChecked = self.ui.upgradePackagesRadioBox.isChecked()
+        # Is Install Requested
+        self.installChecked = self.ui.installPackagesRadioBox.isChecked()
+        
+        # If atleast one is requested
+        if self.updateChecked or self.upgradeChecked or self.installChecked:
+            self.filepath=self.ui.profileFilePath.text()
+            if self.installChecked:
+                self.packageList = self.ui.packageList.split(",")
+            else:
+                self.packageList = None
+            args = SetterArgs(filename=self.filepath, update=self.updateChecked, upgrade=self.upgradeChecked, install_packages=self.packageList)
+            apt_offline_core.AptOfflineCoreLib.setter(args)
+        else:
+            pass
+        
     
     def popupDirectoryDialog(self):
         # Popup a Directory selection box

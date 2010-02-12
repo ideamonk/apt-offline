@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 ############################################################################
 #    Copyright (C) 2005, 2009 Ritesh Raj Sarraf                            #
@@ -57,7 +58,9 @@ try:
         from AptOfflineGUI import pyptofflineguiForm
 except ImportError:
         guiBool = False
-    
+except RuntimeError:
+        guiBool = False
+
 #INFO: Check if python-apt is installed
 PythonApt = True
 try:
@@ -1588,6 +1591,8 @@ def main():
         parser_gui.add_argument('gui', help="Run apt-offline in Graphical mode", action="store_true")
         
         args = parser.parse_args()
+        print type(args)
+        print dir(args)
         
         try:
                 # Sanitize the options/arguments
