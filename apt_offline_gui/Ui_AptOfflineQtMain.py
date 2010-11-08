@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'AptOfflineQtMain.ui'
 #
-# Created: Mon Nov  8 17:14:58 2010
+# Created: Mon Nov  8 17:23:31 2010
 #      by: PyQt4 UI code generator 4.7.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -89,7 +89,7 @@ class Ui_AptOfflineMain(object):
         self.statusbar.setObjectName("statusbar")
         AptOfflineMain.setStatusBar(self.statusbar)
         self.menubar = QtGui.QMenuBar(AptOfflineMain)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 432, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 432, 23))
         self.menubar.setObjectName("menubar")
         self.menuOperations = QtGui.QMenu(self.menubar)
         self.menuOperations.setObjectName("menuOperations")
@@ -133,10 +133,26 @@ class Ui_AptOfflineMain(object):
 
     def retranslateUi(self, AptOfflineMain):
         AptOfflineMain.setWindowTitle(QtGui.QApplication.translate("AptOfflineMain", "APT Offline", None, QtGui.QApplication.UnicodeUTF8))
+        self.createProfileButton.setToolTip(QtGui.QApplication.translate("AptOfflineMain", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Equivalent of apt-offline\'s <span style=\" font-weight:600;\">set</span> command</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.createProfileButton.setText(QtGui.QApplication.translate("AptOfflineMain", "Generate Signature", None, QtGui.QApplication.UnicodeUTF8))
+        self.downloadButton.setToolTip(QtGui.QApplication.translate("AptOfflineMain", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Equivalent of apt-offline\'s <span style=\" font-weight:600;\">get</span> command</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.downloadButton.setText(QtGui.QApplication.translate("AptOfflineMain", "Download Packages or Updates", None, QtGui.QApplication.UnicodeUTF8))
+        self.restoreButton.setToolTip(QtGui.QApplication.translate("AptOfflineMain", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Equivalent of apt-offline\'s <span style=\" font-weight:600;\">install</span> command</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.restoreButton.setText(QtGui.QApplication.translate("AptOfflineMain", "Install Packages or Updates", None, QtGui.QApplication.UnicodeUTF8))
         self.descriptionField.setText(QtGui.QApplication.translate("AptOfflineMain", "Hover your mouse over the buttons to get the description", None, QtGui.QApplication.UnicodeUTF8))
+        self.exitButton.setToolTip(QtGui.QApplication.translate("AptOfflineMain", "Press to Quit", None, QtGui.QApplication.UnicodeUTF8))
         self.exitButton.setText(QtGui.QApplication.translate("AptOfflineMain", "Exit", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("AptOfflineMain", "Description", None, QtGui.QApplication.UnicodeUTF8))
         self.menuOperations.setTitle(QtGui.QApplication.translate("AptOfflineMain", "Operations", None, QtGui.QApplication.UnicodeUTF8))
